@@ -1,8 +1,10 @@
 /* @flow */
-import distillery from "./distillery";
 import apiMemoization from "./apiMemoization";
+import distilleries from "./distilleries";
+import distillery from "./distillery";
 
 export default {
-  distillery,
   apiMemoization,
+  distilleries,
+  distillery,
 };

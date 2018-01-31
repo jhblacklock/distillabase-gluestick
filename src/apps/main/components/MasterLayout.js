@@ -1,13 +1,13 @@
 /* @flow */
-import React, { Component } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import config from "config/application";
 
 type Props = {
-  children: any,
+  children?: ?any,
 };
 
-export default class MasterLayout extends Component {
+export default class MasterLayout extends React.PureComponent {
   props: Props;
   render() {
     return (

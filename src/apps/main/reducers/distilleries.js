@@ -5,10 +5,15 @@ import type { Distillery } from "main/types";
 
 export type State = Distillery[];
 
-export default (state: ImmutableObject<State>, action: Object) => {
+export const INITIAL_STATE = Immutable([]);
+
+export default (
+  state: ImmutableObject<State> = INITIAL_STATE,
+  action: Object,
+) => {
   switch (action.type) {
     case "FETCH_DISTILLERIES":
-      return state.set(action.payload.data);
+      return Immutable([...action.payload.data]);
     default:
       return Immutable.isImmutable(state) ? state : Immutable(state);
   }

@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import Helmet from "react-helmet";
 import * as apiSelectors from "main/reducers/apiMemoization";
-import fetchDistillery from "main/actions/distillery";
+import { fetchDistillery } from "main/actions/distillery";
 import type { Distillery } from "main/types";
 import type { FetchDistilleryAction } from "main/actions/distillery";
 import DistilleryDetails from "main/components/DistilleryDetails";
@@ -21,7 +21,7 @@ export class DistilleryApp extends React.PureComponent {
   props: Props;
 
   static async gsBeforeRoute({ dispatch }) {
-    dispatch(fetchDistillery());
+    return dispatch(fetchDistillery());
   }
 
   render() {

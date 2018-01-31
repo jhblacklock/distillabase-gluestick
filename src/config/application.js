@@ -46,6 +46,7 @@ const headContent: HeadContent = {
 };
 
 const baseConfig: EnvConfig = {
+  apiUrl: `${API_PREFIX}/api`,
   head: headContent,
   logger: {
     pretty: true,

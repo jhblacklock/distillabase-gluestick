@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "rules": {
+    "flowtype/define-flow-type": 1,
     "comma-dangle": 0,
     "no-cond-assign": [2, "always"],
     "no-extra-boolean-cast": 0,
@@ -16,8 +17,7 @@
 
     "no-undef": 2,
     "no-undef-init": 2,
-    "no-undefined": 2,
-    "no-unused-vars": 2,
+    "no-unused-vars": [2, {"ignoreRestSiblings": true}],
 
     "eol-last": 2,
     "indent": [2, 2, {"SwitchCase": 1, "VariableDeclarator": { "var": 2, "let": 2, "const": 3}}],
@@ -31,7 +31,8 @@
     "prefer-const": 2,
 
     "react/display-name": 0,
-    "react/jsx-wrap-multilines": 2
+    "react/jsx-wrap-multilines": 2,
+    "react/prop-types": [2, {"ignore": ["children"]}]
   },
   "env": {
     "es6": true,
@@ -45,6 +46,7 @@
     "experimentalObjectRestSpread": true
   },
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
   ]
 }
